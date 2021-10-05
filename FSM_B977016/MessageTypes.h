@@ -6,9 +6,9 @@
 
 enum message_type
 {
-    Msg_HiHoneyImHome,
-    Msg_StewReady,
-    Msg_Hee_haw  // 고양이 메세지 추가
+    Msg_BreadOut,
+    Msg_BreadPack,
+    Msg_BreadShowcase
 };
 
 
@@ -16,17 +16,17 @@ inline std::string MsgToStr(int msg)
 {
     switch (msg)
     {
-    case Msg_HiHoneyImHome:
+    case Msg_BreadOut:
 
-        return "HiHoneyImHome";
+        return "Bread is out!";
 
-    case Msg_StewReady:
+    case Msg_BreadPack:
 
-        return "StewReady";
+        return "I packed it!";
 
-    case Msg_Hee_haw:
+    case Msg_BreadShowcase:
 
-        return "Hee-haw!";
+        return "I displayed it!";
 
     default:
 
