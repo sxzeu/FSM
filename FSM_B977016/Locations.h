@@ -7,7 +7,8 @@ enum location_type
 {
 	bakery,
 	bank,
-	kitchen
+	kitchen,
+	home
 };
 
 

@@ -142,6 +142,8 @@
     <ClInclude Include="BaseGameEntity.h" />
     <ClInclude Include="EntityManager.h" />
     <ClInclude Include="EntityNames.h" />
+    <ClInclude Include="Jane.h" />
+    <ClInclude Include="JaneOwnedState.h" />
     <ClInclude Include="Locations.h" />
     <ClInclude Include="MessageDispacher.h" />
     <ClInclude Include="MessageTypes.h" />
