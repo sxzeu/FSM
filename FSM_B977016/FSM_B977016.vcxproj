@@ -139,11 +139,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Baker.h" />
+    <ClInclude Include="BakerOwnedStates.h" />
     <ClInclude Include="BaseGameEntity.h" />
     <ClInclude Include="EntityManager.h" />
     <ClInclude Include="EntityNames.h" />
     <ClInclude Include="Jane.h" />
-    <ClInclude Include="JaneOwnedState.h" />
+    <ClInclude Include="JaneOwnedStates.h" />
     <ClInclude Include="Locations.h" />
     <ClInclude Include="MessageDispacher.h" />
     <ClInclude Include="MessageTypes.h" />

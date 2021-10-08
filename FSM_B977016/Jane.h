@@ -1,6 +1,6 @@
 #pragma once
-#ifndef MINER_H
-#define MINER_H
+#ifndef JANE_H
+#define JANE_H
 
 #include <string>
 #include <cassert>
@@ -84,10 +84,12 @@ public:
     int           WorkAtBakery()const { return j_WorkTime; }
     int           IncreaseWorkTime() { j_WorkTime += 1; }
     int           DecreseWorkTime() { j_WorkTime -= 1; }
+    bool          MaxWorkTime() const { return WorkingTime <= j_WorkTime; }
 
     int           Unclean()const { return j_Unclean; }
     int           IncreaseUnclean() { j_Unclean += 1; }
     int           DecreaseUnclean() { j_Unclean -= 2; }
+    bool          MaxUnclean() const { return BakeryUnclean <= j_Unclean; }
 
 
 };

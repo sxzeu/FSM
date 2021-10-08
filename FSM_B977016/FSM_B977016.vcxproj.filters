@@ -45,7 +45,13 @@
     <ClInclude Include="Jane.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="JaneOwnedState.h">
+    <ClInclude Include="Baker.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="JaneOwnedStates.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="BakerOwnedStates.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
