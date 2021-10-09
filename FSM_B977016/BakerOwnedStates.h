@@ -14,60 +14,80 @@
 #include "State.h"
 
 
-class Cat;
+class Baker;
 struct Telegram;
 
 
-class SleepAllDay : public State<Cat>
+class BakeBreads : public State<Baker>
 {
 private:
 
-	SleepAllDay() {}
+	BakeBreads() {}
 
 	//copy ctor and assignment should be private
-	SleepAllDay(const SleepAllDay&);
-	SleepAllDay& operator=(const SleepAllDay&);
+	BakeBreads(const BakeBreads&);
+	BakeBreads& operator=(const BakeBreads&);
 
 public:
 
 	//this is a singleton
-	static SleepAllDay* Instance();
+	static BakeBreads* Instance();
 
-	virtual void Enter(Cat* miner);
+	virtual void Enter(Baker* baker);
 
-	virtual void Execute(Cat* miner);
+	virtual void Execute(Baker* baker);
 
-	virtual void Exit(Cat* miner);
+	virtual void Exit(Baker* baker);
 
-	virtual bool OnMessage(Cat* agent, const Telegram& msg);
+	virtual bool OnMessage(Baker* agent, const Telegram& msg);
 
 };
 
-//------------------------------------------------------------------------
-
-class VisitHomeGetWater : public State<Cat>
+class CheckIngredients : public State<Baker>
 {
 private:
 
-	VisitHomeGetWater() {}
+	CheckIngredients() {}
 
 	//copy ctor and assignment should be private
-	VisitHomeGetWater(const VisitHomeGetWater&);
-	VisitHomeGetWater& operator=(const VisitHomeGetWater&);
+	CheckIngredients(const CheckIngredients&);
+	CheckIngredients& operator=(const CheckIngredients&);
 
 public:
 
 	//this is a singleton
-	static VisitHomeGetWater* Instance();
+	static CheckIngredients* Instance();
 
-	virtual void Enter(Cat* miner);
+	virtual void Enter(Baker* baker);
 
-	virtual void Execute(Cat* miner);
+	virtual void Execute(Baker* baker);
 
-	virtual void Exit(Cat* miner);
+	virtual void Exit(Baker* baker);
 
-	virtual bool OnMessage(Cat* agent, const Telegram& msg);
+	virtual bool OnMessage(Baker* agent, const Telegram& msg);
 };
 
+class CheckBored : public State<Baker>
+{
+private:
 
+	CheckBored() {}
+
+	//copy ctor and assignment should be private
+	CheckBored(const CheckBored&);
+	CheckBored& operator=(const CheckBored&);
+
+public:
+
+	//this is a singleton
+	static CheckBored* Instance();
+
+	virtual void Enter(Baker* baker);
+
+	virtual void Execute(Baker* baker);
+
+	virtual void Exit(Baker* baker);
+
+	virtual bool OnMessage(Baker* agent, const Telegram& msg);
+};
 

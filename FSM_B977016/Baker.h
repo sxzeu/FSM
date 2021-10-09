@@ -16,7 +16,7 @@
 
 #include "BaseGameEntity.h"
 #include "Locations.h"
-#include "misc/ConsoleUtils.h"
+#include "ConsoleUtils.h"
 #include "BakerOwnedStates.h"
 #include "StateMachine.h"
 
@@ -27,7 +27,11 @@ struct Telegram;
 // 제빵사가 빵을 몇개나 만드는 지에 대해 체크
 const int BreadCount = 6;
 // 주방에 재료가 얼마나 있는지 체크 
-const int Ingredients = 5;
+const int Ingredients = 7;
+// 지루하면 노래 바꿔야됨
+const int FeelBored = 4;
+// 피로하면 퇴근해야함
+const int FeelTired = 6;
 
 
 class Baker : public BaseGameEntity
@@ -39,31 +43,29 @@ private:
 
     location_type         m_Location;
 
-    //how many nuggets the miner has in his pockets
-    int                   m_iGoldCarried;
-
-    int                   m_iMoneyInBank;
-
-    //the higher the value, the thirstier the miner
-    int                   m_iThirst;
-
-    //the higher the value, the more tired the miner
-    int                   m_iFatigue;
+    // 빵 갯수 체크
+    int                  b_BreadCount;
+    // 현재 재료 체크
+    int                  b_Ingredients;
+    // 지루함 체크
+    int                  b_FeelBored;
+    // 현재 피로함 체크
+    int                  b_FeelTired;
 
 public:
 
-    Baker(int id) :m_Location(shack),
-        m_iGoldCarried(0),
-        m_iMoneyInBank(0),
-        m_iThirst(0),
-        m_iFatigue(0),
+    Baker(int id) :m_Location(bakery),
+        b_BreadCount(0),
+        b_Ingredients(0),
+        b_FeelBored(0),
+        b_FeelTired(0),
         BaseGameEntity(id)
 
     {
         //set up state machine
         m_pStateMachine = new StateMachine<Baker>(this);
 
-        m_pStateMachine->SetCurrentState(GoHomeAndSleepTilRested::Instance());
+        m_pStateMachine->SetCurrentState(BakeBreads::Instance());
 
         /* NOTE, A GLOBAL STATE HAS NOT BEEN IMPLEMENTED FOR THE MINER */
     }
