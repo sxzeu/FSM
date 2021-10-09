@@ -142,6 +142,8 @@
     <ClInclude Include="Baker.h" />
     <ClInclude Include="BakerOwnedStates.h" />
     <ClInclude Include="BaseGameEntity.h" />
+    <ClInclude Include="ConsoleUtils.h" />
+    <ClInclude Include="CrudeTimer.h" />
     <ClInclude Include="EntityManager.h" />
     <ClInclude Include="EntityNames.h" />
     <ClInclude Include="Jane.h" />
@@ -152,6 +154,10 @@
     <ClInclude Include="State.h" />
     <ClInclude Include="StateMachine.h" />
     <ClInclude Include="Telegram.h" />
+    <ClInclude Include="utils.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CrudeTimer.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

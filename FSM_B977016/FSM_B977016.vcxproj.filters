@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="misc">
+      <UniqueIdentifier>{e8b41a7a-c037-4240-91cb-5291b34e4197}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Telegram.h">
@@ -54,5 +57,19 @@
     <ClInclude Include="BakerOwnedStates.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+    <ClInclude Include="ConsoleUtils.h">
+      <Filter>misc</Filter>
+    </ClInclude>
+    <ClInclude Include="utils.h">
+      <Filter>misc</Filter>
+    </ClInclude>
+    <ClInclude Include="CrudeTimer.h">
+      <Filter>misc</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CrudeTimer.cpp">
+      <Filter>misc</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

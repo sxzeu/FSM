@@ -18,22 +18,17 @@
 #include "Locations.h"
 #include "misc/ConsoleUtils.h"
 #include "BakerOwnedStates.h"
-#include "fsm/StateMachine.h"
+#include "StateMachine.h"
 
 template <class entity_type> class State; //pre-fixed with "template <class entity_type> " for vs8 compatibility
 
 struct Telegram;
 
-//the amount of gold a miner must have before he feels he can go home
-const int ComfortLevel = 5;
-//the amount of nuggets a miner can carry
-const int MaxNuggets = 3;
-//above this value a miner is thirsty
-const int ThirstLevel = 5;
-//above this value a miner is sleepy
-const int TirednessThreshold = 5;
+// 제빵사가 빵을 몇개나 만드는 지에 대해 체크
+const int BreadCount = 6;
+// 주방에 재료가 얼마나 있는지 체크 
+const int Ingredients = 5;
 
-const int
 
 class Baker : public BaseGameEntity
 {
