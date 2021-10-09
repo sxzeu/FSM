@@ -1,15 +1,8 @@
 #pragma once
 #ifndef BAKER_H
 #define BAKER_H
-//------------------------------------------------------------------------
-//
-//  Name:   Miner.h
-//
-//  Desc:   A class defining a goldminer.
-//
-//  Author: Mat Buckland 2002 (fup@ai-junkie.com)
-//
-//------------------------------------------------------------------------
+
+
 #include <string>
 #include <cassert>
 #include <iostream>

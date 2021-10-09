@@ -151,13 +151,25 @@
     <ClInclude Include="Locations.h" />
     <ClInclude Include="MessageDispacher.h" />
     <ClInclude Include="MessageTypes.h" />
+    <ClInclude Include="Owner.h" />
+    <ClInclude Include="OwnerOwnedStates.h" />
     <ClInclude Include="State.h" />
     <ClInclude Include="StateMachine.h" />
     <ClInclude Include="Telegram.h" />
     <ClInclude Include="utils.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Baker.cpp" />
+    <ClCompile Include="BakerOwnedStates.cpp" />
+    <ClCompile Include="BaseGameEntity.cpp" />
     <ClCompile Include="CrudeTimer.cpp" />
+    <ClCompile Include="EntityManager.cpp" />
+    <ClCompile Include="Jane.cpp" />
+    <ClCompile Include="JaneOwnedStates.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="MessageDispater.cpp" />
+    <ClCompile Include="Owner.cpp" />
+    <ClCompile Include="OwnerOwnedStates.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

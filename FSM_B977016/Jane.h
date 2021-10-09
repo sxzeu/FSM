@@ -97,7 +97,7 @@ public:
     int           IncreaseDisplay() { j_DisplayBread += 1; }
     int           DecreaseDisplay() { j_DisplayBread -= 2; }
     bool          MaxDisplay() const { return BreadDisplay <= j_DisplayBread; }
-    void          ResetDisplay() { j_DisplayBread = 0; }
+    void          ClearDisplay() { j_DisplayBread = 0; }
 
 };
 
