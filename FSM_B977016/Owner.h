@@ -18,9 +18,7 @@ template <class entity_type> class State; //pre-fixed with "template <class enti
 struct Telegram;
 
 // 돈통에 돈이 차는지 체크 하는 변수
-const int	MoneyCheck = 10;
-// 피로도
-const int	FeelTired = 6;
+const int	MoneyCheck = 4;
 
 
 class Owner : public BaseGameEntity
@@ -32,20 +30,18 @@ private:
 
 	location_type         m_Location;
 
-	bool o_isMoneyFull;
-	bool o_isTired;
+	int o_Money;
 
 public:
 
 	Owner(int id) :m_Location(bakery),
-		o_isMoneyFull(0),
-		o_isTired(0),
+		o_Money(0),
 		BaseGameEntity(id)
 	{
 		//set up state machine
 		m_pStateMachine = new StateMachine<Owner>(this);
 
-		m_pStateMachine->SetCurrentState(WantToGoHome::Instance());
+		m_pStateMachine->SetCurrentState(CheckMoney::Instance());
 
 		/* NOTE, A GLOBAL STATE HAS NOT BEEN IMPLEMENTED FOR THE MINER */
 	}
@@ -65,8 +61,10 @@ public:
 	location_type Location()const { return m_Location; }
 	void          ChangeLocation(location_type loc) { m_Location = loc; }
 
-	bool          IsMoneyFull()const { return o_isMoneyFull; }
-	bool		  IsTired()const { return o_isTired; }
+	bool          IsMoneyFull()const { return MoneyCheck <= o_Money;}
+	void		  IncreaseMoney() { o_Money += 1; }
+	void	      ResetMoney() { o_Money = 0; }
+	bool		  IsMoneyEmpty() const { return MoneyCheck == 0; }
 
 };
 

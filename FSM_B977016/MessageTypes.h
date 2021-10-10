@@ -7,8 +7,9 @@
 enum message_type
 {
     Msg_BreadOut,
-    Msg_BreadPack,
-    Msg_BreadShowcase
+    Msg_RequestIngredient,
+    Msg_BreadShowcase,
+    Msg_OrderIngerdient
 };
 
 
@@ -20,16 +21,14 @@ inline std::string MsgToStr(int msg)
 
         return "Bread is out!";
 
-    case Msg_BreadPack:
+    case Msg_RequestIngredient:
 
-        return "I packed it!";
+        return "We need more ingredient!";
 
-    case Msg_BreadShowcase:
-
-        return "I displayed it!";
+    case Msg_OrderIngerdient:
+        return "I order it don't worry!";
 
     default:
-
         return "Not recognized!";
     }
 }

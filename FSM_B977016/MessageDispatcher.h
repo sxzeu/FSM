@@ -16,7 +16,7 @@
 #include <set>
 
 
-#include "misc/ConsoleUtils.h"
+#include "ConsoleUtils.h"
 #include "Telegram.h"
 
 class BaseGameEntity;
@@ -66,3 +66,4 @@ public:
     //the main game loop.
     void DispatchDelayedMessages();
 };
+#endif

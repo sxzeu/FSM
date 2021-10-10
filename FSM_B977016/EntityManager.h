@@ -57,3 +57,4 @@ public:
 	//this method removes the entity from the list
 	void            RemoveEntity(BaseGameEntity* pEntity);
 };
+#endif

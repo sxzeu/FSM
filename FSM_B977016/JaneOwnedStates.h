@@ -46,8 +46,6 @@ public:
 
 };
 
-
-//------------------------------------------------------------------------
 // 제인은 베이커리의 알바생입니다. 제인은 베이커리에서 근무시간동안 근무합니다. 
 //------------------------------------------------------------------------
 class WorkingAtBakery : public State<Jane>
@@ -74,26 +72,22 @@ public:
     virtual bool OnMessage(Jane* agent, const Telegram& msg);
 };
 
-
-
-//------------------------------------------------------------------------
-//
 //  빵이 다 구워졌다는 메시지를 받으면 제인은 빵을 정리합니다 
 //------------------------------------------------------------------------
-class DisplayBreads : public State<Jane>
+class DisplayBread : public State<Jane>
 {
 private:
 
-    DisplayBreads() {}
+    DisplayBread() {}
 
     //copy ctor and assignment should be private
-    DisplayBreads(const DisplayBreads&);
-    DisplayBreads& operator=(const DisplayBreads&);
+    DisplayBread(const DisplayBread&);
+    DisplayBread& operator=(const DisplayBread&);
 
 public:
 
     //this is a singleton
-    static DisplayBreads* Instance();
+    static DisplayBread* Instance();
 
     virtual void Enter(Jane* jane);
 
@@ -104,25 +98,21 @@ public:
     virtual bool OnMessage(Jane* agent, const Telegram& msg);
 };
 
-
-//------------------------------------------------------------------------
-//
-//  근무시간을 다 채우면 제인은 집으로 돌아가 휴식을 취합니다.
-//------------------------------------------------------------------------
-class GoToHomeAndTakeARest : public State<Jane>
+// 제인은 매장이 더러워지면 청소를 합니다.
+class  Cleaning : public State<Jane>
 {
 private:
 
-    GoToHomeAndTakeARest() {}
+    Cleaning() {}
 
     //copy ctor and assignment should be private
-    GoToHomeAndTakeARest(const GoToHomeAndTakeARest&);
-    GoToHomeAndTakeARest& operator=(const GoToHomeAndTakeARest&);
+    Cleaning(const Cleaning&);
+    Cleaning& operator=(const Cleaning&);
 
 public:
 
     //this is a singleton
-    static GoToHomeAndTakeARest* Instance();
+    static Cleaning* Instance();
 
     virtual void Enter(Jane* jane);
 

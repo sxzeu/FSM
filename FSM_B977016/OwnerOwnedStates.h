@@ -60,21 +60,21 @@ public:
 	virtual bool OnMessage(Owner* agent, const Telegram& msg);
 };
 
-// 사장은 피로 쌓이면 퇴근함
-class WantToGoHome: public State<Owner>
+// 돈이 쌓이면 은행에 가서 저금함
+class GotoBank: public State<Owner>
 {
 private:
 
-	WantToGoHome() {}
+	GotoBank() {}
 
 	//copy ctor and assignment should be private
-	WantToGoHome(const WantToGoHome&);
-	WantToGoHome& operator=(const WantToGoHome&);
+	GotoBank(const GotoBank&);
+	GotoBank& operator=(const GotoBank&);
 
 public:
 
 	//this is a singleton
-	static WantToGoHome* Instance();
+	static GotoBank* Instance();
 
 	virtual void Enter(Owner* owner);
 
@@ -86,3 +86,4 @@ public:
 
 };
 #pragma once
+#endif

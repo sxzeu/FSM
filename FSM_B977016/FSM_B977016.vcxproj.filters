@@ -36,7 +36,7 @@
     <ClInclude Include="Locations.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="MessageDispacher.h">
+    <ClInclude Include="MessageDispatcher.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="StateMachine.h">
@@ -80,7 +80,7 @@
     <ClCompile Include="EntityManager.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="MessageDispater.cpp">
+    <ClCompile Include="MessageDispatcher.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="BaseGameEntity.cpp">

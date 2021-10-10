@@ -149,7 +149,7 @@
     <ClInclude Include="Jane.h" />
     <ClInclude Include="JaneOwnedStates.h" />
     <ClInclude Include="Locations.h" />
-    <ClInclude Include="MessageDispacher.h" />
+    <ClInclude Include="MessageDispatcher.h" />
     <ClInclude Include="MessageTypes.h" />
     <ClInclude Include="Owner.h" />
     <ClInclude Include="OwnerOwnedStates.h" />
@@ -167,7 +167,7 @@
     <ClCompile Include="Jane.cpp" />
     <ClCompile Include="JaneOwnedStates.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="MessageDispater.cpp" />
+    <ClCompile Include="MessageDispatcher.cpp" />
     <ClCompile Include="Owner.cpp" />
     <ClCompile Include="OwnerOwnedStates.cpp" />
   </ItemGroup>
