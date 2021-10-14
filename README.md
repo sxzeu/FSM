@@ -1,11 +1,11 @@
 ## game AI FSM hw
 
-# Mat Buckland의 Programming Game AI by example 교재 샘플로 제공되는 ‘WestWorldWithMessaging’ project를 수정/변형해서 FSM 기반 대화 스크립트를 출력하기
+### Mat Buckland의 Programming Game AI by example 교재 샘플로 제공되는 ‘WestWorldWithMessaging’ project를 수정/변형해서 FSM 기반 대화 스크립트를 출력하기
 
-# 컴파일 환경
+## 컴파일 환경
 - 컴파일 환경: visual studio 2019
 
-# 내용
+## 내용
 - 설정: 바쁘게 일을 하고 있는 낮 시간의 빵집
 - 등장인물: Baker(제빵사) / Jane(알바생 제인) / Owner(사장)
 - 바쁘게 돌아가는 낮 시간의 베이커리 특성상 서로 메시지를 주고 받으며 일이 진행되는 모습을 나타내는 것에 중점을 두었습니다.
@@ -28,5 +28,5 @@
 4) 재료를 주문해달라는 메시지를 받으면 재료를 주문합니다.
 
 
-# 참고 소스 
+## 참고 소스 
 - Mat Buckland의 Programming Game AI by Example , chapter2 WestWorldWithMessaging.zip
