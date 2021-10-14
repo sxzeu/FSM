@@ -118,13 +118,13 @@ void Cleaning::Enter(Jane* pJane)
 
 void Cleaning::Execute(Jane* pJane)
 {
-    pJane->DecreaseUnclean();
-    pJane->GetFSM()->ChangeState(WorkingAtBakery::Instance());
+    pJane->ClearClean();
 
 }
 
 void Cleaning::Exit(Jane* pJane)
 {
+    pJane->GetFSM()->ChangeState(WorkingAtBakery::Instance());
     cout << "\n" << GetNameOfEntity(pJane->ID()) << ": " << "Wow! so clean.";
 }
 

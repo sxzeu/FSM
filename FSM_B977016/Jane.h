@@ -73,10 +73,11 @@ public:
     void          ChangeLocation(location_type loc) { m_Location = loc; }
 
     int           Unclean()const { return j_Unclean; }
-    void           IncreaseUnclean() { j_Unclean += 1; }
+    void          IncreaseUnclean() { j_Unclean += 1; }
     void          DecreaseUnclean() { j_Unclean -= 4; }
     bool          MaxUnclean() const { return BakeryUnclean <= j_Unclean; }
-    bool          ClearCleaning(){ return j_Unclean == 0; }
+    bool          isClearCleaning(){ return j_Unclean == 0; }
+    void          ClearClean() { j_Unclean == 0; }
 
     int           Display()const { return j_DisplayBread; }
     //void           IncreaseDisplay() { j_DisplayBread += 1; }

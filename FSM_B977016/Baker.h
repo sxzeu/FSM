@@ -23,8 +23,7 @@ const int MaxBread = 6;
 const int Ingredients = 7;
 // 지루하면 노래 바꿔야됨
 const int FeelBored = 4;
-// 피로하면 퇴근해야함
-const int FeelTired = 6;
+
 
 
 class Baker : public BaseGameEntity
