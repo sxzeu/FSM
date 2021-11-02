@@ -1,5 +1,5 @@
 ## game AI FSM
-- Mat Buckland의 Programming Game AI by example 교재 샘플로 제공되는 ‘WestWorldWithMessaging’ project를 수정/변형해서 FSM 기반 대화 스크립트를 출력하기
+- Mat Buckland의 Programming Game AI by example 교재 샘플로 제공되는 ‘WestWorldWithMessaging’ project를 수정/변형해서 FSM 기반 대화 스크립트를 출력
 
 ## 컴파일 환경
 - 컴파일 환경: visual studio 2019
